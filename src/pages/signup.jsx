@@ -37,6 +37,7 @@ export default function Signup() {
       })
       .catch((err) => {
         setFirstName('');
+        setEmailAddress('');
         setPassword('');
         setError(err.message);
       });
