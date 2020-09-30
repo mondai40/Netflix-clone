@@ -2,6 +2,7 @@ import React from 'react';
 
 import { useContent } from '../hooks';
 import selectionFilter from '../utils/selection-filter';
+import { BrowseContainer } from '../containers/browse';
 
 export default function Browse() {
   // we need the series and the films
@@ -10,7 +11,6 @@ export default function Browse() {
   // we need slides
   const slides = selectionFilter({ series, films });
   // pass it to the browse container
-  console.log(slides);
 
-  return <p>hellor this browse</p>;
+  return <BrowseContainer slides={slides} />;
 }
