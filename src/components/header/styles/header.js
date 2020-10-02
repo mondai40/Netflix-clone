@@ -4,8 +4,9 @@ import { Link as ReactrouterLink } from 'react-router-dom';
 export const Background = styled.div`
   display: flex;
   flex-direction: column;
+  ${'' /* You can with props with function and interpolation */}
   background: url(${({ src }) =>
-      src ? `../images/misc/${src}.jpg` : `../images/misc/home-bg.jpg`})
+    src ? `../images/misc/${src}.jpg` : `../images/misc/home-bg.jpg`})
     top left / cover no-repeat;
 `;
 
@@ -53,4 +54,22 @@ export const ButtonLink = styled(ReactrouterLink)`
   &:hover {
     background-color: #f40612;
   }
+`;
+
+export const Feature = styled(Container)`
+  padding: 150px 0 500px 0;
+  flex-direction: column;
+  align-items: normal;
+  width: 50%;
+
+  @media (max-width: 1100px) {
+    display: none;
+  }
+`;
+
+export const Text = styled.p`
+  color: whtie;
+  font-size: 22px;
+  line-height: normal;
+  text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.45);
 `;
