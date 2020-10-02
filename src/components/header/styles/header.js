@@ -103,11 +103,22 @@ export const Link = styled.p`
   &:last-of-type {
     margin-right: 0;
   }
+
+
 `;
 
 export const Group = styled.div`
   display: flex;
   align-items: center;
+`;
+
+export const Picture = styled.button`
+  background: url(${({ src }) => src});
+  background-size: contain;
+  border: 0;
+  width: 32px;
+  height: 32px;
+  cursor: pointer;
 `;
 
 export const Dropdown = styled.div`
@@ -118,6 +129,28 @@ export const Dropdown = styled.div`
   width: 100px;
   top: 32px;
   right: 10px;
+
+  ${Group}:last-of-type ${Link} {
+    cursor: pointer;
+  }
+  ${Group} {
+    margin-bottom: 10px;
+    &:last-of-type {
+      margin-bottom: 0;
+    }
+    ${Link}, ${Picture} {
+      cursor: default;
+    }
+  }
+
+  button {
+    margin-right: 10px;
+  }
+  p {
+    font-size: 12px;
+    margin-bottom: 0;
+    margin-top: 0;
+  }
 `;
 
 export const Profile = styled.div`
@@ -134,13 +167,4 @@ export const Profile = styled.div`
     display: flex;
     flex-direction: column;
   }
-`;
-
-export const Picture = styled.button`
-  background: url(${({ src }) => src});
-  background-size: contain;
-  border: 0;
-  width: 32px;
-  height: 32px;
-  cursor: pointer;
 `;
