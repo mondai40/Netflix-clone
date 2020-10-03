@@ -94,7 +94,7 @@ export const Link = styled.p`
   color: white;
   text-decoration: none;
   margin-right: 30px;
-  font-weight: ${({ active }) => (active === 'true' ? '700' : 'normal')}
+  font-weight: ${({ active }) => (active === 'true' ? '700' : 'normal')};
   cursor: pointer;
 
   &:hover {
@@ -103,8 +103,6 @@ export const Link = styled.p`
   &:last-of-type {
     margin-right: 0;
   }
-
-
 `;
 
 export const Group = styled.div`
