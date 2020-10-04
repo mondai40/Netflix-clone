@@ -21,16 +21,13 @@ Player.Video = function PlayerVideo({ src, ...restProps }) {
 
   return showPlayer
     ? ReactDOM.createPortal(
-        <Overlay onClick={() => setShowPlayer(false)} {...restProps}>
+        <Overlay
+          onClick={() => setShowPlayer(false)}
+          {...restProps}
+          data-testid="player"
+        >
           <Inner>
-            <video
-              id="netflix-player"
-              controls
-              onClick={(event) => event.stopPropagation()}
-              muted
-              autoPlay
-              playinline
-            >
+            <video id="netflix-player" controls>
               <source src={src} type="video/mp4" />
             </video>
             <Close />
@@ -42,10 +39,12 @@ Player.Video = function PlayerVideo({ src, ...restProps }) {
 };
 
 Player.Button = function PlayerButton({ ...restProps }) {
+  // eslint-disable-next-line no-unused-vars
   const { showPlayer, setShowPlayer } = useContext(PlayerContext);
 
   return (
     <Button
+      // eslint-disable-next-line no-shadow
       onClick={() => setShowPlayer((showPlayer) => !showPlayer)}
       {...restProps}
     >
