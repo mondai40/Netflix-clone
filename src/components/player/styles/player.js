@@ -24,6 +24,7 @@ export const Inner = styled.div`
   video {
     height: 100%;
     width: 100%;
+    z-index: 99;
   }
 `;
 
@@ -48,8 +49,8 @@ export const Close = styled.button`
     left: 10px;
     top: 0;
     content: '';
-    height: 2px;
-    width: 22px;
+    height: 22px;
+    width: 2px;
     background-color: #333;
   }
 
