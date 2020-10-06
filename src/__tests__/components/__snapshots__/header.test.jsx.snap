@@ -17,6 +17,18 @@ exports[`<Header /> render the <Header /> with a background 1`] = `
 </div>
 `;
 
+exports[`<Header /> render the <Header /> without a background 1`] = `
+<div
+  class="header__Container-djltcn-1 cKeoqP"
+>
+  <p
+    class="header__Link-djltcn-7 cMxYlu"
+  >
+    Hello I am a link!
+  </p>
+</div>
+`;
+
 exports[`<Header /> render the full <Header /> with a background 1`] = `
 <div
   class="header__Background-djltcn-0 fBihds"

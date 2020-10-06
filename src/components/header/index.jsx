@@ -67,7 +67,6 @@ Header.FeatureCallOut = function HeaderFeatureCallOut({
 };
 
 Header.TextLink = function HeaderTextLink({ children, ...restProps }) {
-  console.log('in link', restProps.active);
   return <Link {...restProps}>{children}</Link>;
 };
 
