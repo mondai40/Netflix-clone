@@ -48,7 +48,7 @@ export default function Signup() {
       <HeaderContainer>
         <Form>
           <Form.Title>Sign Up</Form.Title>
-          {error && <Form.Error>{error}</Form.Error>}
+          {error && <Form.Error data-testid="error">{error}</Form.Error>}
 
           <Form.Base onSubmit={handleSignUp} method="POST">
             <Form.Input
@@ -74,11 +74,16 @@ export default function Signup() {
                 setPassword(target.value);
               }}
             />
-            <Form.Submit disabled={isInValid} type="submit">
+            <Form.Submit
+              disabled={isInValid}
+              type="submit"
+              data-testid="sign-up"
+            >
               Sign Up
             </Form.Submit>
             <Form.Text>
-              Already a user? <Form.Link to="/signin">Sign in now.</Form.Link>
+              Already a user?
+              <Form.Link to="/signin">Sign in now.</Form.Link>
             </Form.Text>
             <Form.TextSmall>
               This page is protected by Google reCAPTCHA to ensure you're not a

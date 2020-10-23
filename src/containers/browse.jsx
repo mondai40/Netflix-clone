@@ -19,12 +19,9 @@ export function BrowseContainer({ slides }) {
   const user = firebase.auth().currentUser || {};
 
   useEffect(() => {
-    console.log('rp', profile);
-    console.log('loading', loading);
     setTimeout(() => {
       setLoading(false);
     }, 3000);
-    console.log('loading', loading);
   }, [profile.displayName]);
 
   useEffect(() => {
@@ -32,7 +29,6 @@ export function BrowseContainer({ slides }) {
   }, [slides, category]);
 
   useEffect(() => {
-    console.log(slideRows);
     const fuse = new Fuse(slideRows, {
       keys: ['data.description', 'data.title', 'data.genre'],
     });
