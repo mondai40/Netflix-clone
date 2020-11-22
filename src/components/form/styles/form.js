@@ -75,7 +75,7 @@ export const Input = styled.input`
 
 export const Submit = styled.button`
   background: #e50914;
-  border-radius: 4p;x
+  border-radius: 4px;
   font-size: 16px;
   font-weight: bold;
   margin: 24px 0 12px;
@@ -85,6 +85,6 @@ export const Submit = styled.button`
   cursor: pointer;
 
   &:disabled {
-    opacity: 0.5
+    opacity: 0.5;
   }
 `;
