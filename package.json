@@ -3,9 +3,6 @@
   "version": "0.1.0",
   "private": true,
   "dependencies": {
-    "@testing-library/jest-dom": "^4.2.4",
-    "@testing-library/react": "^9.3.2",
-    "@testing-library/user-event": "^7.1.2",
     "firebase": "^7.21.1",
     "fuse.js": "^6.4.1",
     "normalize.css": "^8.0.1",
@@ -18,7 +15,7 @@
   "scripts": {
     "start": "react-scripts start",
     "build": "react-scripts build",
-    "test": "react-scripts test",
+    "test": "react-scripts test --coverage --watchAll",
     "eject": "react-scripts eject"
   },
   "eslintConfig": {
@@ -36,6 +33,50 @@
       "last 1 safari version"
     ]
   },
+  "jest": {
+    "collectCoverageFrom": [
+      "<rootDir>/src/**/*.{js, jsx}",
+      "!<rootDir>/src/app.js",
+      "!<rootDir>/src/helpers/routes.js",
+      "!<rootDir>/src/lib/firebase.js",
+      "!<rootDir>/src/lib/firebase.prod.js",
+      "!<rootDir>/src/index.js",
+      "!<rootDir>/src/seed.js",
+      "!<rootDir>/src/utils/index.js",
+      "!<rootDir>/src/pages/index.js",
+      "!<rootDir>/src/global-styles.js",
+      "!<rootDir>/src/components/index.js",
+      "!<rootDir>/src/firebase.prod.js",
+      "!<rootDir>/src/hooks/*.js",
+      "!<rootDir>/src/context/*.js",
+      "<rootDir>/src/**/*.jsx",
+      "!<rootDir>/src/app.jsx",
+      "!<rootDir>/src/helpers/routes.jsx",
+      "!<rootDir>/src/lib/firebase.jsx",
+      "!<rootDir>/src/lib/firebase.prod.jsx",
+      "!<rootDir>/src/index.jsx",
+      "!<rootDir>/src/seed.jsx",
+      "!<rootDir>/src/utils/index.jsx",
+      "!<rootDir>/src/pages/index.jsx",
+      "!<rootDir>/src/global-styles.jsx",
+      "!<rootDir>/src/components/index.jsx",
+      "!<rootDir>/src/firebase.prod.jsx",
+      "!<rootDir>/src/hooks/*.jsx",
+      "!<rootDir>/src/context/*.jsx"
+    ],
+    "coverageThreshold": {
+      "global": {
+        "branches": 90,
+        "functions": 90,
+        "lines": 90,
+        "statements": 90
+      }
+    },
+    "coverageReporters": [
+      "html",
+      "text"
+    ]
+  },
   "devDependencies": {
     "babel-eslint": "^10.1.0",
     "eslint-config-airbnb": "^18.2.0",
@@ -48,6 +89,9 @@
     "eslint-plugin-react": "^7.20.0",
     "eslint-plugin-react-hooks": "4.0.0",
     "install-peerdeps": "^2.0.3",
-    "prettier": "^2.1.2"
+    "prettier": "^2.1.2",
+    "@testing-library/jest-dom": "^4.2.4",
+    "@testing-library/react": "^9.3.2",
+    "@testing-library/user-event": "^7.1.2"
   }
 }
